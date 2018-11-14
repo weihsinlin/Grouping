@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f234d3c1-4065-447b-b9a6-3f265a676593" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../PrecisionRecall/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PrecisionRecall/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PrecisionRecall/out/production/PrecisionRecall/PrecisionR/B3PrecisionRecallCounter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PrecisionRecall/out/production/PrecisionRecall/PrecisionR/DebugMain.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PrecisionRecall/out/production/PrecisionRecall/PrecisionR/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../PrecisionRecall/out/production/PrecisionRecall/PrecisionR/Main.class" afterDir="false" />
-    </list>
+    <list default="true" id="f234d3c1-4065-447b-b9a6-3f265a676593" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -60,6 +55,14 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JAVA" value="21" />
+        </counts>
+      </usages-collector>
+    </session>
+    <session id="-1260049219">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.opened" value="1" />
         </counts>
       </usages-collector>
     </session>
@@ -127,7 +130,7 @@
     </findStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -153,7 +156,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -171,6 +173,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -226,9 +229,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1807" y="25" width="1664" height="956" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25277436" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25585696" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -258,6 +260,12 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$USER_HOME$" />
+      <path value="$PROJECT_DIR$/.." />
+    </ignored-roots>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Main.java">
