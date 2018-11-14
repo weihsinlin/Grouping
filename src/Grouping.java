@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Random;
 
 public class Grouping {
 
@@ -15,13 +14,13 @@ public class Grouping {
     static ArrayList<Person> ntnc = new ArrayList<>();
 
     public static ArrayList<Person>[] grouping(ArrayList<Person> people) {
-        ArrayList<Person>[] group = new ArrayList[] {group1, group2, group3, group4};
+        ArrayList<Person>[] groups = new ArrayList[] {group1, group2, group3, group4};
 
 
         for (Person p : people) {
             if (!p.fixed_group.equals("0")) {
                 int g_index = Integer.parseInt(p.fixed_group) - 1;
-                group[g_index].add(p);
+                groups[g_index].add(p);
             } else {
                 categorize(p);
             }
@@ -39,15 +38,17 @@ public class Grouping {
         non_fixed.addAll(ntc);
         non_fixed.addAll(ntnc);
 
-        Random r = new Random();
-        int i = r.nextInt(4);
+
+//        Random r = new Random();
+//        int i = r.nextInt(4);
+        int i = which_min(groups);
 
         for (Person p : non_fixed) {
-            group[i % 4].add(p);
+            groups[i % 4].add(p);
             i++;
         }
 
-        return group;
+        return groups;
     }
 
     private static String categorize(Person person) {
@@ -68,5 +69,21 @@ public class Grouping {
                 return "NTNC";
             }
         }
+    }
+
+    private static int which_min(ArrayList<Person>[] groups) {
+        int[] arr = new int[] {groups[0].size(), groups[1].size(), groups[2].size(), groups[3].size()};
+        int min = arr[0];
+        int rtn = 0;
+        for (int i = 1; i < arr.length; i++) {
+            if (min > arr[i]) {
+                min = arr[i];
+                rtn = i;
+            }
+        }
+
+        return rtn;
+
+
     }
 }
