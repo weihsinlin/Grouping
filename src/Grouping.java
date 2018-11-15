@@ -8,10 +8,15 @@ public class Grouping {
     static ArrayList<Person> group3 = new ArrayList<>();
     static ArrayList<Person> group4 = new ArrayList<>();
 
-    static ArrayList<Person> tc = new ArrayList<>();
-    static ArrayList<Person> tnc = new ArrayList<>();
-    static ArrayList<Person> ntc = new ArrayList<>();
-    static ArrayList<Person> ntnc = new ArrayList<>();
+    static ArrayList<Person> tcm = new ArrayList<>();
+    static ArrayList<Person> tncm = new ArrayList<>();
+    static ArrayList<Person> ntcm= new ArrayList<>();
+    static ArrayList<Person> ntncm = new ArrayList<>();
+
+    static ArrayList<Person> tcf = new ArrayList<>();
+    static ArrayList<Person> tncf = new ArrayList<>();
+    static ArrayList<Person> ntcf = new ArrayList<>();
+    static ArrayList<Person> ntncf = new ArrayList<>();
 
     public static ArrayList<Person>[] grouping(ArrayList<Person> people) {
         ArrayList<Person>[] groups = new ArrayList[] {group1, group2, group3, group4};
@@ -27,16 +32,24 @@ public class Grouping {
         }
 
 
-        Collections.shuffle(tc);
-        Collections.shuffle(tnc);
-        Collections.shuffle(ntc);
-        Collections.shuffle(ntnc);
+        Collections.shuffle(tcm);
+        Collections.shuffle(tncm);
+        Collections.shuffle(ntcm);
+        Collections.shuffle(ntncm);
+        Collections.shuffle(tcf);
+        Collections.shuffle(tncf);
+        Collections.shuffle(ntcf);
+        Collections.shuffle(ntncf);
 
         ArrayList<Person> non_fixed = new ArrayList<>();
-        non_fixed.addAll(tc);
-        non_fixed.addAll(tnc);
-        non_fixed.addAll(ntc);
-        non_fixed.addAll(ntnc);
+        non_fixed.addAll(tcm);
+        non_fixed.addAll(tncm);
+        non_fixed.addAll(ntcm);
+        non_fixed.addAll(ntncm);
+        non_fixed.addAll(tcf);
+        non_fixed.addAll(tncf);
+        non_fixed.addAll(ntcf);
+        non_fixed.addAll(ntncf);
 
 
 //        Random r = new Random();
@@ -51,22 +64,34 @@ public class Grouping {
         return groups;
     }
 
-    private static String categorize(Person person) {
+    private static void categorize(Person person) {
         if (person.talk) { //talk
             if (person.christian) { //talk & christian
-                tc.add(person);
-                return "TC";
+                if (person.gender.equals("M")) { //talk & christian & male
+                    tcm.add(person);
+                } else { //talk & christian & female
+                    tcf.add(person);
+                }
             } else { //talk, not christian
-                tnc.add(person);
-                return "TNC";
+                if (person.gender.equals("M")) { //talk, not christian, male
+                    tncm.add(person);
+                } else { //talk, not christian, female
+                    tncf.add(person);
+                }
             }
         } else { //not talk
-            if (person.christian) {
-                ntc.add(person);
-                return "NTC";
-            } else {
-                ntnc.add(person);
-                return "NTNC";
+            if (person.christian) { //not talk, christian
+                if (person.gender.equals("M")) { //not talk, christian, male
+                    ntcm.add(person);
+                } else { //not talk, christian, female
+                    ntcf.add(person);
+                }
+            } else { //not talk, not christian
+                if (person.gender.equals("M")) { //not talk, not christian, male
+                    ntncm.add(person);
+                } else { //not talk, not christian, female
+                    ntncf.add(person);
+                }
             }
         }
     }

@@ -5,9 +5,10 @@ import java.util.Date;
 
 public class Main {
     public static void main(String[] args) {
+
         String input_path = "/Users/Philip/Desktop/input.csv";
 
-        DateFormat dateFormat = new SimpleDateFormat("yyyyMMdd_");
+        DateFormat dateFormat = new SimpleDateFormat("yyyyMMdd");
         Date date = new Date();
         System.out.println();
         String d = dateFormat.format(date);

@@ -14,7 +14,7 @@ public class ReadWrite {
             while ((line = br.readLine()) != null) {
                 String[] data = line.split(",");
                 for (int i = 0; i < data.length; i++) data[i] = data[i].trim();
-                Person p = new Person(data[0], data[1], data[2], data[3], data[4]);
+                Person p = new Person(data[0], data[1], data[2], data[3], data[4], data[5]);
                 rtn.add(p);
             }
 
@@ -50,7 +50,7 @@ public class ReadWrite {
                 String line = g1.get(i).name + ", " + g2.get(i).name + ", " + g3.get(i).name + ", " + g4.get(i).name + "\n";
                 fw.append(line);
             }
-            System.out.println("CSV file was created successfully !!!");
+            System.out.println("CSV file was created: " + output_path);
 
         } catch (IOException ex) {
             System.out.println("Error in CsvFileWriter !!!");
